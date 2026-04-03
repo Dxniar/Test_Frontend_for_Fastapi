@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FastAPI Frontend Template</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Работа с FastAPI</h1>
+
+      <!-- Форма отправки данных на POST /api/requests -->
+      <form id="request-form" class="card">
+        <label for="name">Имя</label>
+        <input id="name" name="name" type="text" placeholder="Ваше имя" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="message">Сообщение</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Введите сообщение"
+          required
+        ></textarea>
+
+        <div class="actions">
+          <button type="submit">Отправить (POST)</button>
+          <button id="get-requests-btn" type="button">Получить данные (GET)</button>
+        </div>
+      </form>
+
+      <!-- Блок для вывода ошибок -->
+      <p id="error" class="error" role="alert"></p>
+
+      <!-- Блок для красивого вывода JSON -->
+      <pre id="response" class="response"></pre>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
