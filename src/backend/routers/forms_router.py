@@ -1,3 +1,4 @@
+# Роутер для форм
 from fastapi import APIRouter
 
 from backend.database_connect import database_conn
@@ -5,6 +6,7 @@ from backend.shemas import Form
 
 forms_router = APIRouter()
 
+#Подключение к БД
 supabase = database_conn()
 
 @forms_router.post("/post_forms", tags=["Forms"], summary="Отправка формы")

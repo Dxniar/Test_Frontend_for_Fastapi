@@ -1,3 +1,4 @@
+# API для отправки и получения формы заявок
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -12,8 +13,9 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
-)
+) # Middlleware для Web
 
+# Подключение роутеров
 app.include_router(forms_router)
 
 if __name__ == "__main__":
